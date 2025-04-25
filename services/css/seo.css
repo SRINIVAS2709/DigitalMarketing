@@ -45,7 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 60px; 
+  top: 40px; 
   left: 0;
   width: 100%;
   z-index: 999;
@@ -190,6 +190,7 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
+    top: 60px; 
    }
  
    .navbar .logo{
@@ -206,6 +207,7 @@ body {
 
 /* Hero Section */
 .hero {
+  margin-top: 50px;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../../assets/images/SEOServiceBG.webp');
@@ -402,6 +404,37 @@ body {
   font-weight: normal;
 }
 
+@media (max-width: 768px) {
+  .digital-first-containerr {
+    padding: 20px 40px;
+  }
+
+  .digital-first-containerr h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .digital-first-containerr p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-first-containerr {
+    padding: 20px 20px;
+  }
+
+  .digital-first-containerr h2 {
+    font-size: 20px;
+  }
+
+  .digital-first-containerr p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
 /* services css */
 /* Services Section */
 .services-section {
@@ -486,6 +519,84 @@ body {
   line-height: 1.6;
 }
 
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .service-box h3 {
+    font-size: 18px;
+  }
+
+  .service-box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    gap: 30px;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .service-box h3 {
+    font-size: 17px;
+  }
+
+  .service-box p {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-box h3 {
+    font-size: 16px;
+  }
+
+  .service-box p {
+    font-size: 13px;
+  }
+}
+
+
 /* Readmore section */
 
 .marketing-services-section {
@@ -527,25 +638,48 @@ body {
   text-decoration: underline;
 }
 
-.bottom-readmore {
-  margin-top: 10px;
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+    max-width: 90%;
+  }
 }
 
-.bottom-btn {
-  padding: 10px 25px;
-  border: 1px solid #ccc;
-  color: #333;
-  background: transparent;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
 }
 
-.bottom-btn:hover {
-  background: #f1f1f1;
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .marketing-services-section {
+    padding: 60px 15px 40px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .marketing-services-section .underline {
+    margin: 0 auto 20px;
+  }
 }
+
 
 
 /* Facts Section */
@@ -621,7 +755,81 @@ body {
 .fact-box:hover .diamond img {
   transform: rotate(0deg);
 }
+@media (max-width: 1024px) {
+  .facts-section .section-title {
+    font-size: 30px;
+  }
 
+  .fact-box p {
+    font-size: 13px;
+  }
+
+  .fact-box .icon-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .fact-box .icon-box img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .facts-container {
+    gap: 30px;
+  }
+
+  .fact-box .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fact-box .icon-box img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fact-box p {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .facts-section {
+    padding: 40px 15px;
+  }
+
+  .facts-section .section-title {
+    font-size: 24px;
+  }
+
+  .facts-container {
+    gap: 20px;
+  }
+
+  .fact-box .icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fact-box .icon-box img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .fact-box p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .facts-section .underline {
+    margin-bottom: 25px;
+  }
+}
+
+
+/* Quote css */
 .quote-section {
   text-align: center;
   padding: 4rem 1rem;

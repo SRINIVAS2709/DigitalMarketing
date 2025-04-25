@@ -45,7 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 60px; 
+  top: 40px; 
   left: 0;
   width: 100%;
   z-index: 999;
@@ -190,6 +190,7 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
+    top: 60px; 
    }
  
    .navbar .logo{
@@ -206,6 +207,7 @@ body {
 
 /* Hero Section */
 .hero {
+  margin-top: 50px;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../../assets/images/DigitalMarketing.webp');
@@ -402,8 +404,37 @@ body {
   text-align: center;
   font-weight: normal;
 }
+@media (max-width: 768px) {
+  .digital-first-containerr {
+    padding: 20px 40px;
+  }
 
-/* services css */
+  .digital-first-containerr h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .digital-first-containerr p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-first-containerr {
+    padding: 20px 20px;
+  }
+
+  .digital-first-containerr h2 {
+    font-size: 20px;
+  }
+
+  .digital-first-containerr p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
 /* Services Section */
 .services-section {
   padding: 60px 20px;
@@ -487,6 +518,79 @@ body {
   line-height: 1.6;
 }
 
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .service-box {
+    padding: 15px;
+  }
+
+  .service-box h3 {
+    font-size: 18px;
+  }
+
+  .service-box p {
+    font-size: 14px;
+  }
+
+  .icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .underline {
+    margin-bottom: 30px;
+  }
+
+  .service-box {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .service-box h3 {
+    font-size: 16px;
+  }
+
+  .service-box p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
 /* Readmore section */
 
 .marketing-services-section {
@@ -546,6 +650,55 @@ body {
 
 .bottom-btn:hover {
   background: #f1f1f1;
+}
+
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  .bottom-btn {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .bottom-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .bottom-btn {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
 }
 
 
@@ -613,6 +766,72 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
 }
+
+@media (max-width: 1024px) {
+  .facts-section .section-title {
+    font-size: 30px;
+  }
+
+  .fact-box p {
+    font-size: 13px;
+  }
+
+  .fact-box .icon-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .fact-box .diamond img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .facts-container {
+    gap: 30px;
+  }
+
+  .fact-box .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fact-box .diamond img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fact-box p {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .facts-section .section-title {
+    font-size: 24px;
+  }
+
+  .facts-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .fact-box .icon-box {
+    width: 55px;
+    height: 55px;
+  }
+
+  .fact-box .diamond img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .fact-box p {
+    font-size: 12px;
+  }
+}
+
 
 /* Optional: Hover animation */
 .fact-box:hover .diamond {

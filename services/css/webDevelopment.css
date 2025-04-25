@@ -45,7 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 60px; 
+  top: 40px; 
   left: 0;
   width: 100%;
   z-index: 999;
@@ -190,6 +190,7 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
+    top: 60px; 
    }
  
    .navbar .logo{
@@ -206,6 +207,7 @@ body {
 
 /* Hero Section */
 .hero {
+  margin-top: 50px;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../../assets/images/WebDevelopmentBg.webp');
@@ -402,7 +404,38 @@ body {
   text-align: center;
   font-weight: normal;
 }
+@media (max-width: 768px) {
+  .digital-first-containerr {
+    padding: 20px 40px;
+  }
 
+  .digital-first-containerr h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .digital-first-containerr p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-first-containerr {
+    padding: 20px 20px;
+  }
+
+  .digital-first-containerr h2 {
+    font-size: 20px;
+  }
+
+  .digital-first-containerr p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/*  */
 .services-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -502,27 +535,82 @@ body {
 .bottom-btn:hover {
   background: #f1f1f1;
 }
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  .bottom-btn {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .bottom-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .bottom-btn {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+}
+
 
 /* who we are css */
+/* Who We Are Section */
+/* Who We Are Section */
 .who-we-are {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px; /* Reduced gap on smaller screens */
 }
-.whoweare-headtext{
+
+.whoweare-headtext {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.whoweare-headtext h3{
+
+.whoweare-headtext h3 {
   font-size: 30px;
 }
-.whoweare-text-container{
+
+.whoweare-text-container {
   display: flex;
-  gap: 40px;
-  padding: 10px 50px;
+  gap: 20px; /* Reduced gap between left and right sections */
+  padding: 10px 20px; /* Reduced padding */
 }
+
 .who-left {
   flex: 1 1 400px;
 }
@@ -537,7 +625,7 @@ body {
   flex: 1 1 400px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px; /* Reduced gap between progress bars */
 }
 
 .progress-bar {
@@ -570,15 +658,38 @@ body {
   background: linear-gradient(to right, #00bcd4 70%, #f0f0f0 70%);
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .who-we-are {
     flex-direction: column;
+    gap: 15px; /* Further reduced gap on small screens */
   }
 
+  .whoweare-text-container {
+    flex-direction: column;
+    gap: 15px; /* Further reduced gap between sections */
+    padding: 5px 10px; /* Reduced padding for smaller screens */
+  }
+
+  .who-left,
   .who-right {
     width: 100%;
+    padding: 0 10px; /* Reduced padding on the left and right sections */
+  }
+
+  .who-left p {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  .progress-bar {
+    height: 25px; /* Adjusted height */
+  }
+
+  .progress-bar span {
+    font-size: 14px; /* Smaller font size */
   }
 }
+
 
 /* quote css */
 .quote-section {

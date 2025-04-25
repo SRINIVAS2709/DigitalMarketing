@@ -45,7 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 60px; 
+  top: 40px; 
   left: 0;
   width: 100%;
   z-index: 999;
@@ -190,6 +190,7 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
+    top: 60px; 
    }
  
    .navbar .logo{
@@ -206,6 +207,7 @@ body {
 
 /* Hero Section */
 .hero {
+  margin-top: 50px;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../../assets/images/EmailMarketing.webp');
@@ -401,8 +403,37 @@ body {
   text-align: center;
   font-weight: normal;
 }
+@media (max-width: 768px) {
+  .digital-first-containerr {
+    padding: 20px 40px;
+  }
 
-/* services css */
+  .digital-first-containerr h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .digital-first-containerr p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-first-containerr {
+    padding: 20px 20px;
+  }
+
+  .digital-first-containerr h2 {
+    font-size: 20px;
+  }
+
+  .digital-first-containerr p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
 /* Services Section */
 .services-section {
   padding: 60px 20px;
@@ -485,6 +516,38 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr; /* Stack the items in 2 columns for small screens */
+    gap: 20px 30px; /* Adjust gap between items */
+  }
+
+  .service-box {
+    padding: 15px;
+    text-align: center; /* Center text for better alignment */
+  }
+
+  .icon-box {
+    width: 80px; /* Smaller icon box for mobile */
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .diamond {
+    transform: rotate(45deg); /* Keeps rotation consistent */
+  }
+
+  .diamond img {
+    transform: rotate(-45deg);
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+  }
+
+  .service-box h3 {
+    font-size: 14px; /* Smaller text for headings */
+    font-weight: 600;
+  }
+}
 
 /* Readmore section */
 
@@ -546,6 +609,55 @@ body {
 .bottom-btn:hover {
   background: #f1f1f1;
 }
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  .bottom-btn {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .bottom-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .bottom-btn {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+}
+
 
 /* Facts Section */
 .facts-section {
@@ -620,6 +732,45 @@ body {
 .fact-box:hover .diamond img {
   transform: rotate(0deg);
 }
+@media (max-width: 768px) {
+  .facts-container {
+    display: grid; /* Change to grid layout */
+    grid-template-columns: 1fr; /* Display in one column */
+    gap: 20px; /* Adjust the space between the boxes */
+  }
+
+  .fact-box {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .icon-box {
+    width: 60px; /* Smaller icon box */
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .diamond {
+    transform: rotate(45deg);
+  }
+
+  .diamond img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+  }
+
+  .fact-box p {
+    font-size: 12px; /* Smaller text size for mobile */
+    margin-top: 10px;
+  }
+  .facts-section .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+
 
 /* ...................................Stats Css........................ */
 .stats {
