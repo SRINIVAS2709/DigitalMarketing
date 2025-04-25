@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Top Bar */
+.topbar {
+    font-size: 16px;
+    padding: 0.5rem 0;
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.topbar .right a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 40px;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar .logo img {
+    height: 100px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar .menu a.active {
+    color: #00ff66;
+}
+
+.navbar .menu a:hover {
+    color: #00ff66;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #00ff66;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topbar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .navbar .menu a,
+    .dropdown>a {
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid #444;
+    }
+
+    .dropdown-content {
+        position: relative;
+        background-color: #333;
+        box-shadow: none;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .navbar .menu a,
+    .dropdown>a {
+        width: 100%;
+        padding: 10px 40px;
+        border-top: 1px solid #444;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        font-size: 14px;
+        padding: 0.3rem 0;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        margin: 0;
+        top: 60px;
+    }
+
+    .navbar .logo {
+        width: 130px;
+        height: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .navbar .logo img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 50px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../../assets/images/DigitalMarketing.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    /* makes text readable */
+}
+
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: #00e676;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.8rem 1.6rem;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: #ffb300;
+    color: #000;
+}
+
+.btn.secondary {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* Responsive */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* digital-first-container CSS */
+.digital-first-containerr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px 80px;
+}
+
+.digital-first-containerr h2 {
+    font-size: 30px;
+}
+
+.digital-divider {
+    width: 40px;
+    height: 4px;
+    background-color: #22c55e;
+    margin: 1rem auto 2rem;
+    border-radius: 2px;
+}
+
+.digital-first-containerr p {
+    margin: 10px 0px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .digital-first-containerr {
+        padding: 20px 40px;
+    }
+
+    .digital-first-containerr h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .digital-first-containerr p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-first-containerr {
+        padding: 20px 20px;
+    }
+
+    .digital-first-containerr h2 {
+        font-size: 20px;
+    }
+
+    .digital-first-containerr p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+/* Our Goals */
+.goals-section {
+    background-color: #11161d;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.goals-heading h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.goals-heading .underline {
+    width: 40px;
+    height: 4px;
+    background-color: #2ecc71;
+    margin: 10px auto;
+}
+
+.goals-heading p {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.goals-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.goal-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    width: 220px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.goal-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.goal-icon {
+    margin-bottom: 20px;
+}
+
+.goal-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.goal-item p {
+    font-size: 15px;
+    color: #ddd;
+}
+
+/* ...................... */
+.cta-section {
+    background-color: #2ecc71;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.cta-text p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.cta-button a {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    padding: 14px 28px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 20px 30px;
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center text for mobile */
+        gap: 20px;
+    }
+
+    .cta-text p {
+        font-size: 16px;
+    }
+
+    .cta-button a {
+        padding: 12px 24px;
+        font-size: 16px;
+        /* Adjust button size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 15px 20px;
+    }
+
+    .cta-text p {
+        font-size: 14px;
+    }
+
+    .cta-button a {
+        padding: 10px 20px;
+        font-size: 14px;
+        /* Smaller font size for very small screens */
+    }
+}
+
+/* ..................Footer.................... */
+.footer {
+    margin-top: 50px;
+    background-color: #182638;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .fa-caret-right {
+    margin-right: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 10;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-contact p {
+    margin: 6px 0;
+    font-size: 14px;
+  }
+  
+  .footer-contact p i {
+    margin-right: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer {
+      margin-top: 10px;
+      padding: 30px 10px;
+    }
+  
+    .footer-container iframe {
+      width: 350px;
+      height: 400px;
+    }
+  
+    .footer-links,
+    .footer-contact {
+      width: 100%;
+    }
+  
+    .footer-logo img {
+      margin-bottom: 10px;
+      width: 130px;
+    }
+  }

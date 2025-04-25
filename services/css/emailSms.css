@@ -45,7 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 40px; 
+  top: 40px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -105,7 +105,7 @@ body {
   color: #00ff66;
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
 
@@ -190,25 +190,26 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
-    top: 60px; 
-   }
- 
-   .navbar .logo{
-     width: 130px;
-     height: 100%;
-     display: flex;
-     align-items: end;
-   }
-   .navbar .logo img{
-     width: 100%;
-     height: 100%;
-   }
+    top: 60px;
+  }
+
+  .navbar .logo {
+    width: 130px;
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+
+  .navbar .logo img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* Hero Section */
 .hero {
   margin-top: 50px;
-  background: 
+  background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../../assets/images/EmailMarketing.webp');
   background-size: cover;
@@ -219,7 +220,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white; /* makes text readable */
+  color: white;
+  /* makes text readable */
 }
 
 .hero-content {
@@ -403,6 +405,7 @@ body {
   text-align: center;
   font-weight: normal;
 }
+
 @media (max-width: 768px) {
   .digital-first-containerr {
     padding: 20px 40px;
@@ -516,38 +519,40 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
+
 @media (max-width: 768px) {
   .services-container {
-    grid-template-columns: 1fr 1fr; /* Stack the items in 2 columns for small screens */
-    gap: 20px 30px; /* Adjust gap between items */
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .service-box {
     padding: 15px;
-    text-align: center; /* Center text for better alignment */
+    text-align: center;
   }
 
   .icon-box {
-    width: 80px; /* Smaller icon box for mobile */
+    width: 80px;
     height: 80px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
 
   .diamond {
-    transform: rotate(45deg); /* Keeps rotation consistent */
+    transform: rotate(45deg);
   }
 
   .diamond img {
     transform: rotate(-45deg);
-    width: 24px; /* Adjust icon size */
+    width: 24px;
     height: 24px;
   }
 
   .service-box h3 {
-    font-size: 14px; /* Smaller text for headings */
+    font-size: 14px;
     font-weight: 600;
   }
 }
+
 
 /* Readmore section */
 
@@ -609,6 +614,7 @@ body {
 .bottom-btn:hover {
   background: #f1f1f1;
 }
+
 @media (max-width: 1024px) {
   .main-heading {
     font-size: 30px;
@@ -732,11 +738,15 @@ body {
 .fact-box:hover .diamond img {
   transform: rotate(0deg);
 }
+
 @media (max-width: 768px) {
   .facts-container {
-    display: grid; /* Change to grid layout */
-    grid-template-columns: 1fr; /* Display in one column */
-    gap: 20px; /* Adjust the space between the boxes */
+    display: grid;
+    /* Change to grid layout */
+    grid-template-columns: 1fr;
+    /* Display in one column */
+    gap: 20px;
+    /* Adjust the space between the boxes */
   }
 
   .fact-box {
@@ -745,7 +755,8 @@ body {
   }
 
   .icon-box {
-    width: 60px; /* Smaller icon box */
+    width: 60px;
+    /* Smaller icon box */
     height: 60px;
     margin-bottom: 20px;
   }
@@ -755,14 +766,17 @@ body {
   }
 
   .diamond img {
-    width: 30px; /* Adjust icon size */
+    width: 30px;
+    /* Adjust icon size */
     height: 30px;
   }
 
   .fact-box p {
-    font-size: 12px; /* Smaller text size for mobile */
+    font-size: 12px;
+    /* Smaller text size for mobile */
     margin-top: 10px;
   }
+
   .facts-section .section-title {
     font-size: 20px;
     font-weight: 600;
@@ -953,6 +967,7 @@ body {
   }
 }
 
+/* ..................Footer.................... */
 .footer {
   margin-top: 50px;
   background-color: #182638;
@@ -963,16 +978,12 @@ body {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   max-width: 1200px;
   margin: auto;
 }
-
-.footer-logo img {
-  width: 165px;
-}
-
 
 .footer-links h3,
 .footer-contact h3 {
@@ -1011,13 +1022,16 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  .footer {
+    margin-top: 10px;
+    padding: 30px 10px;
   }
 
-  .footer-logo,
+  .footer-container iframe {
+    width: 350px;
+    height: 400px;
+  }
+
   .footer-links,
   .footer-contact {
     width: 100%;

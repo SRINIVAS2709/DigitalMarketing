@@ -43,9 +43,7 @@
 
         <div class="menu">
             <a href="../../index.html" class="active">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">CLIENTS</a>
-
+            <a href="../../aboutus/aboutus.html">ABOUT</a>
             <div class="dropdown">
                 <a href="#">SERVICES ▼</a>
                 <div class="dropdown-content">
@@ -57,8 +55,6 @@
                     <a href="../html/webDevelopment.html">Web Development</a>
                 </div>
             </div>
-
-            <a href="#">GALLERY</a>
             <a href="#">BLOG</a>
             <a href="#">CONTACT</a>
         </div>
@@ -75,9 +71,6 @@
             </div>
         </div>
     </section>
-
-    <!-- ........................................Code Below........................................................................... -->
-
 
     <!-- CTA Section -->
     <section class="cta-section">
@@ -238,17 +231,18 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-logo">
-                <a href=""><img src="../../assets/images/GrowthLinkLogo.png" alt="growthlink logo"></a>
-            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.7749648097115!2d78.32820867498724!3d17.470481683430886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2f709544e4f15f4b%3A0xc8861de80d61b6b1!2sGrowthlink%20Realty%20Services!5e0!3m2!1sen!2sin!4v1745602378551!5m2!1sen!2sin"
+                width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
             <div class="footer-links">
                 <h3 class="footer-quicklink-text">Quick Links</h3>
                 <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-caret-right"></i></i>Home</a></li>
-                    <li><a href="#services"><i class="fa-solid fa-caret-right"></i>Service</a></li>
-                    <li><a href="#Faqs"><i class="fa-solid fa-caret-right"></i>About us</a></li>
-                    <li><a href="#form-submission"><i class="fa-solid fa-caret-right"></i>Gallary</a></li>
-                    <li><a href="index.html"><i class="fa-solid fa-caret-right"></i>Contact Us</a></li>
+                    <li><a href="../../index.html"><i class="fa-solid fa-caret-right"></i></i>Home</a></li>
+                    <li><a href="../../index.html#OurServices"><i class="fa-solid fa-caret-right"></i>Service</a></li>
+                    <li><a href="../../aboutus/aboutus.html"><i class="fa-solid fa-caret-right"></i>About us</a></li>
+                    <li><a href=""><i class="fa-solid fa-caret-right"></i>Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -272,8 +266,7 @@
             </div>
         </div>
     </footer>
-    <!-- ...........................................End........................................................................... -->
-
+    
     <script>
         function toggleMenu() {
             const menu = document.querySelector('.navbar .menu');

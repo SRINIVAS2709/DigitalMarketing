@@ -839,6 +839,7 @@ body {
   }
 }
 
+/* ..................Footer.................... */
 .footer {
   margin-top: 50px;
   background-color: #182638;
@@ -849,16 +850,12 @@ body {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   max-width: 1200px;
   margin: auto;
 }
-
-.footer-logo img {
-  width: 165px;
-}
-
 
 .footer-links h3,
 .footer-contact h3 {
@@ -897,13 +894,14 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  .footer {
+    margin-top: 10px;
+    padding: 30px 10px;
   }
-
-  .footer-logo,
+  .footer-container iframe{
+    width: 350px;
+    height: 400px;
+  }
   .footer-links,
   .footer-contact {
     width: 100%;

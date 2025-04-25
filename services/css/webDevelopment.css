@@ -584,9 +584,6 @@ body {
   }
 }
 
-
-/* who we are css */
-/* Who We Are Section */
 /* Who We Are Section */
 .who-we-are {
   display: flex;
@@ -687,6 +684,16 @@ body {
 
   .progress-bar span {
     font-size: 14px; /* Smaller font size */
+  }
+  .who-left {
+    flex: 1 1 100%;
+    margin-bottom: 20px; /* optional: adds spacing if stacked */
+
+  }
+  .who-right {
+    flex: 1 1 100%;
+    padding: 0 10px;
+    gap: 8px; /* Optional: reduce spacing between progress bars even more */
   }
 }
 
@@ -797,6 +804,7 @@ body {
   }
 }
 
+/* ..................Footer.................... */
 .footer {
   margin-top: 50px;
   background-color: #182638;
@@ -807,16 +815,12 @@ body {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   max-width: 1200px;
   margin: auto;
 }
-
-.footer-logo img {
-  width: 165px;
-}
-
 
 .footer-links h3,
 .footer-contact h3 {
@@ -855,13 +859,14 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  .footer {
+    margin-top: 10px;
+    padding: 30px 10px;
   }
-
-  .footer-logo,
+  .footer-container iframe{
+    width: 350px;
+    height: 400px;
+  }
   .footer-links,
   .footer-contact {
     width: 100%;
