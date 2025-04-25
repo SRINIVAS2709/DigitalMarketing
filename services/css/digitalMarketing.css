@@ -13,7 +13,13 @@ body {
 .topbar {
   font-size: 16px;
   padding: 0.5rem 0;
+  background-color: white;
   color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .topbar .container {
@@ -38,10 +44,15 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
+  position: fixed;
+  top: 60px; 
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .navbar .logo img {
-  height: 50px;
+  height: 100px;
 }
 
 .navbar .menu {
@@ -92,6 +103,10 @@ body {
 
 .dropdown-content a:hover {
   color: #00ff66;
+}
+
+.hamburger{
+  display: none;
 }
 
 /* Responsive Design */
@@ -173,17 +188,27 @@ body {
   }
 
   .navbar {
-    padding: 10px 15px;
-  }
-
-  .navbar .logo img {
-    height: 40px;
-  }
+    padding: 10px 20px;
+    margin: 0;
+   }
+ 
+   .navbar .logo{
+     width: 130px;
+     height: 100%;
+     display: flex;
+     align-items: end;
+   }
+   .navbar .logo img{
+     width: 100%;
+     height: 100%;
+   }
 }
 
 /* Hero Section */
 .hero {
-  background: url('../../assets/images/DigitalMarketing.webp');
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../../assets/images/DigitalMarketing.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -192,7 +217,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white; /* makes text readable */
 }
+
 
 .hero-content {
   background-color: rgba(0, 0, 0, 0.5);
@@ -596,6 +623,7 @@ body {
   transform: rotate(0deg);
 }
 
+/* quote css */
 .quote-section {
   text-align: center;
   padding: 4rem 1rem;
