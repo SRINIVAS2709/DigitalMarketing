@@ -1,187 +1,187 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-  }
-  
-  /* Top Bar */
-  .topbar {
-    font-size: 16px;
-    padding: 0.5rem 0;
-    color: black;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Top Bar */
+.topbar {
+  font-size: 16px;
+  padding: 0.5rem 0;
+  color: black;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.topbar .right a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 40px;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar .menu a.active {
+  color: #00ff66;
+}
+
+.navbar .menu a:hover {
+  color: #00ff66;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #00ff66;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .topbar .container {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-  }
-  
-  .topbar .right a {
-    margin-left: 10px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  /* Navigation */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 40px;
-  }
-  
-  .navbar .logo img {
-    height: 50px;
-  }
-  
-  .navbar .menu {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .navbar .menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
-  }
-  
-  .navbar .menu a.active {
-    color: #00ff66;
-  }
-  
-  .navbar .menu a:hover {
-    color: #00ff66;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    padding: 10px;
-    display: block;
-    color: white;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    color: #00ff66;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .topbar .container {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px 20px;
-    }
-  
-    .navbar .menu {
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-    }
-  
-    .navbar .menu a,
-    .dropdown>a {
-      width: 100%;
-      padding: 10px 0;
-      border-top: 1px solid #444;
-    }
-  
-    .dropdown-content {
-      position: relative;
-      background-color: #333;
-      box-shadow: none;
-    }
-  
-    .navbar .logo {
-      margin-bottom: 10px;
-    }
-  
-    /* Hamburger Menu Styles */
-    .hamburger {
-      display: block;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
-  
-    .navbar .menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 10px 0;
-    }
-  
-    .navbar .menu.active {
-      display: flex;
-    }
-  
-    .navbar .menu a,
-    .dropdown>a {
-      width: 100%;
-      padding: 10px 40px;
-      border-top: 1px solid #444;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .topbar {
-      font-size: 14px;
-      padding: 0.3rem 0;
-    }
-  
-    .navbar {
-      padding: 10px 15px;
-    }
-  
-    .navbar .logo img {
-      height: 40px;
-    }
+    gap: 10px;
   }
 
-  /* Hero Section */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .navbar .menu a,
+  .dropdown>a {
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background-color: #333;
+    box-shadow: none;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  /* Hamburger Menu Styles */
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navbar .menu a,
+  .dropdown>a {
+    width: 100%;
+    padding: 10px 40px;
+    border-top: 1px solid #444;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    font-size: 14px;
+    padding: 0.3rem 0;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar .logo img {
+    height: 40px;
+  }
+}
+
+/* Hero Section */
 .hero {
   background: url('../../assets/images/SocialMediaMarketing.webp');
   background-size: cover;
@@ -233,7 +233,7 @@
   border: 1px solid #ccc;
 }
 
-/* Responsive */
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-content {
@@ -281,4 +281,517 @@
   }
 }
 
-  
+/* ...................... */
+.cta-section {
+  background-color: #2ecc71;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.cta-text p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cta-button a {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  padding: 14px 28px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 20px 30px;
+    flex-direction: column;
+    /* Stack items vertically */
+    text-align: center;
+    /* Center text for mobile */
+    gap: 20px;
+  }
+
+  .cta-text p {
+    font-size: 16px;
+  }
+
+  .cta-button a {
+    padding: 12px 24px;
+    font-size: 16px;
+    /* Adjust button size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 15px 20px;
+  }
+
+  .cta-text p {
+    font-size: 14px;
+  }
+
+  .cta-button a {
+    padding: 10px 20px;
+    font-size: 14px;
+    /* Smaller font size for very small screens */
+  }
+}
+
+/* digital-first-container CSS */
+.digital-first-containerr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px 80px;
+}
+
+.digital-first-containerr h2 {
+  font-size: 30px;
+}
+
+.digital-divider {
+  width: 40px;
+  height: 4px;
+  background-color: #22c55e;
+  margin: 1rem auto 2rem;
+  border-radius: 2px;
+}
+
+.digital-first-containerr p {
+  margin: 10px 0px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* benefits Css */
+.benefits-section {
+  background-color: #0e1114;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.benefits-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefits-line {
+  width: 40px;
+  height: 4px;
+  background-color: #00c853;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  text-align: left;
+  padding-left: 50px;
+  position: relative;
+}
+
+.benefit-icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(96%) saturate(459%) hue-rotate(85deg) brightness(97%) contrast(89%);
+}
+
+.benefit-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.benefit-item p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* work process */
+.work-process-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.work-process-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.work-process-line {
+  width: 40px;
+  height: 4px;
+  background-color: #00c853;
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
+}
+
+.work-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.diamond {
+  width: 80px;
+  height: 80px;
+  background-color: #f2f2f2;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diamond img {
+  width: 36px;
+  height: 36px;
+  transform: rotate(-45deg);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(96%) saturate(459%) hue-rotate(85deg) brightness(97%) contrast(89%);
+}
+
+.process-step p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  max-width: 180px;
+  transition: color 0.3s ease;
+}
+
+/* 🌟 Hover Effects */
+.process-step:hover .diamond {
+  background-color: #00c853;
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.3);
+}
+
+.process-step:hover .diamond img {
+  transform: rotate(-45deg) scale(1.1);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.process-step:hover p {
+  color: #00c853;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .work-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .work-process-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .diamond {
+    width: 70px;
+    height: 70px;
+  }
+
+  .diamond img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .process-step p {
+    font-size: 15px;
+  }
+}
+
+
+/* Readmore section */
+
+.marketing-services-section {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: #fff;
+  color: #333;
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.marketing-services-section .underline {
+  width: 50px;
+  height: 3px;
+  background: #00c853;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.description .link-highlight {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.description .link-highlight:hover {
+  text-decoration: underline;
+}
+
+.bottom-readmore {
+  margin-top: 10px;
+}
+
+.bottom-btn {
+  padding: 10px 25px;
+  border: 1px solid #ccc;
+  color: #333;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bottom-btn:hover {
+  background: #f1f1f1;
+}
+
+
+/* Quote css */
+.quote-section {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.quote-section h2 {
+  font-size: 4rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  width: 40px;
+  height: 4px;
+  background-color: #22c55e;
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+.quote-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quote-form input {
+  padding: 1rem;
+  font-size: 1rem;
+  width: 300px;
+  background: #f8f8f8;
+  border: none;
+  border-bottom: 2px solid #504f4f;
+  border-radius: 6px;
+  outline: none;
+}
+
+.quote-form button {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(to right, #1eb1e7, #4ade80);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quote-form button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quote-section h2 {
+    font-size: 2.5rem;
+    /* Reduce font size for small screens */
+  }
+
+  .quote-form {
+    flex-direction: column;
+    /* Stack the form elements vertically */
+    gap: 1.5rem;
+    /* Increased gap for better spacing */
+  }
+
+  .quote-form input {
+    width: 100%;
+    /* Make input fields take full width on small screens */
+    font-size: 1.1rem;
+    /* Increase font size slightly for easier reading */
+  }
+
+  .quote-form button {
+    width: 100%;
+    /* Make button take full width */
+    padding: 1rem;
+    font-size: 1.1rem;
+    /* Increase font size slightly for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-section h2 {
+    font-size: 2rem;
+    /* Further reduce font size on very small screens */
+  }
+
+  .quote-form input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    /* Adjust font size for very small screens */
+  }
+
+  .quote-form button {
+    padding: 0.8rem 1.5rem;
+    /* Adjust button padding */
+    font-size: 1rem;
+    /* Adjust button font size */
+  }
+}
+
+.footer {
+  margin-top: 50px;
+  background-color: #182638;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  width: 165px;
+}
+
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.fa-caret-right {
+  margin-right: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 10;
+}
+
+.footer-links ul li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-contact p i {
+  margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-contact {
+    width: 100%;
+  }
+
+  .footer-logo img {
+    margin-bottom: 10px;
+    width: 130px;
+  }
+}
