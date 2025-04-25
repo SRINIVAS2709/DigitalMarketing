@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Top Bar */
+.topbar {
+  font-size: 16px;
+  padding: 0.5rem 0;
+  color: black;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.topbar .right a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 40px;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar .menu a.active {
+  color: #00ff66;
+}
+
+.navbar .menu a:hover {
+  color: #00ff66;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #00ff66;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topbar .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .navbar .menu a,
+  .dropdown>a {
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background-color: #333;
+    box-shadow: none;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  /* Hamburger Menu Styles */
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navbar .menu a,
+  .dropdown>a {
+    width: 100%;
+    padding: 10px 40px;
+    border-top: 1px solid #444;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    font-size: 14px;
+    padding: 0.3rem 0;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar .logo img {
+    height: 40px;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('../../assets/images/hero-bg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #00e676;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+  padding: 0.8rem 1.6rem;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #ffb300;
+  color: #000;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* Responsive */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+  }
+}
