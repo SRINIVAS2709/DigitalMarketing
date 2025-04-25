@@ -184,7 +184,10 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url('../../assets/images/hero-bg') center/cover no-repeat;
+  background: url('../../assets/images/ppcBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 90vh;
   display: flex;
   justify-content: center;
