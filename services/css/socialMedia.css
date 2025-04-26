@@ -476,7 +476,7 @@ body {
   width: 32px;
   height: 32px;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(52%) sepia(96%) saturate(459%) hue-rotate(85deg) brightness(97%) contrast(89%);
+  /* filter: brightness(0) saturate(100%) invert(52%) sepia(96%) saturate(459%) hue-rotate(85deg) brightness(97%) contrast(89%); */
 }
 
 .benefit-item h3 {
@@ -573,7 +573,7 @@ body {
   transform: rotate(-45deg);
   object-fit: contain;
   transition: transform 0.3s ease;
-  filter: brightness(0) saturate(100%) invert(52%) sepia(96%) saturate(459%) hue-rotate(85deg) brightness(97%) contrast(89%);
+  /* filter: brightness(0) saturate(100%) invert(52%) sepia(96%) saturate(459%) hue-rotate(85deg) brightness(97%) contrast(89%); */
 }
 
 .process-step p {
@@ -588,11 +588,6 @@ body {
 .process-step:hover .diamond {
   background-color: #00c853;
   box-shadow: 0 8px 20px rgba(0, 200, 83, 0.3);
-}
-
-.process-step:hover .diamond img {
-  transform: rotate(-45deg) scale(1.1);
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .process-step:hover p {
