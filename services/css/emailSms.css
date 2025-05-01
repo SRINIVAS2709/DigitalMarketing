@@ -912,9 +912,7 @@ body {
   }
 }
 
-
-
-/* ...................................Stats Css........................ */
+/* ...................................Stats CSS........................ */
 .stats {
   display: flex;
   justify-content: space-around;
@@ -927,6 +925,10 @@ body {
   flex: 1;
   margin: 10px;
   padding: 40px;
+  transition: transform 0.3s ease, height 0.3s ease;
+  /* Added height transition */
+  height: auto;
+  /* Ensure the box height adjusts dynamically */
 }
 
 .stat-box .icon {
@@ -944,6 +946,18 @@ body {
   font-weight: 500;
 }
 
+/* Hover Effect */
+.stat-box:hover {
+  transform: translateY(-40px);
+  /* expands upward */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box.green:hover {
+  background-color: #00aaff;
+}
+
+/* Media query for tablets and below (max-width: 768px) */
 @media (max-width: 768px) {
   .stats {
     flex-direction: column;
@@ -968,6 +982,7 @@ body {
   }
 }
 
+/* Media query for mobile screens (max-width: 480px) */
 @media (max-width: 480px) {
   .stats {
     padding: 10px;
@@ -990,6 +1005,8 @@ body {
   }
 }
 
+
+/* .................... */
 .quote-section {
   text-align: center;
   padding: 4rem 1rem;
@@ -1047,7 +1064,7 @@ body {
     /* Further reduce font size on very small screens */
   }
 
-  .getfreequote-btn{
+  .getfreequote-btn {
     padding: 0.8rem 1.5rem;
     /* Adjust button padding */
     font-size: 1rem;

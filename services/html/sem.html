@@ -259,20 +259,21 @@
     <section class="stats">
         <div class="stat-box">
             <div class="icon"><i class="fa-solid fa-users"></i></div>
-            <h2>381</h2>
+            <h2 data-target="381">0</h2>
             <p>HAPPY CLIENTS</p>
         </div>
         <div class="stat-box">
             <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
-            <h2>16years</h2>
+            <h2 data-target="16" data-suffix="years">0</h2>
             <p>IN BUSINESS</p>
         </div>
         <div class="stat-box">
             <div class="icon"><i class="fa-solid fa-flag-checkered"></i></div>
-            <h2>588</h2>
+            <h2 data-target="588">0</h2>
             <p>PROJECT FINISHED</p>
         </div>
     </section>
+
 
     <!-- send request -->
     <section class="quote-section">
@@ -322,10 +323,51 @@
 
 
     <script>
+        // 1. Toggle mobile menu
         function toggleMenu() {
             const menu = document.querySelector('.navbar .menu');
             menu.classList.toggle('active');
         }
+
+        // 2. Stats Counter (only when .stats comes into view)
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".stat-box h2");
+            const statsSection = document.querySelector(".stats");
+            let hasAnimated = false;
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const target = +counter.dataset.target;
+                    const suffix = counter.dataset.suffix || "";
+                    let count = 0;
+                    const duration = 2000;
+                    const increment = target / (duration / 20);
+
+                    const updateCounter = () => {
+                        count += increment;
+                        if (count < target) {
+                            counter.textContent = `${Math.floor(count)}${suffix}`;
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = `${target}${suffix}`;
+                        }
+                    };
+
+                    updateCounter();
+                });
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting && !hasAnimated) {
+                    animateCounters();
+                    hasAnimated = true;
+                }
+            }, {
+                threshold: 0.5
+            });
+
+            observer.observe(statsSection);
+        });
     </script>
     <script src="../../Form Submit/formsubmit.js"></script>
 </body>
