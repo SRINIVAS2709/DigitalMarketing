@@ -45,14 +45,14 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 40px; 
+  top: 40px;
   left: 0;
   width: 100%;
   z-index: 999;
 }
 
 .navbar .logo img {
- width: 150px;
+  width: 150px;
 }
 
 .navbar .menu {
@@ -105,9 +105,10 @@ body {
   color: #00ff66;
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .topbar .container {
@@ -189,18 +190,19 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
-   }
- 
-   .navbar .logo{
-     width: 130px;
-     height: 100%;
-     display: flex;
-     align-items: end;
-   }
-   .navbar .logo img{
-     width: 100%;
-     height: 100%;
-   }
+  }
+
+  .navbar .logo {
+    width: 130px;
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+
+  .navbar .logo img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 
@@ -281,9 +283,10 @@ body {
 }
 
 @media (max-width: 480px) {
-  .navbar{
-    top: 60px; 
+  .navbar {
+    top: 60px;
   }
+
   .hero-content {
     padding: 1rem;
     width: 95%;
@@ -305,6 +308,122 @@ body {
     width: 100%;
   }
 }
+
+/* modal css */
+/* Modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+/* Close button */
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Headings */
+.modal h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Form elements */
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal label {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal input,
+.modal textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Button styling */
+.modal button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #007BFF;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 
 
 /* ...................................Stats Css........................ */
@@ -1329,10 +1448,12 @@ body {
     margin-top: 10px;
     padding: 30px 10px;
   }
-  .footer-container iframe{
+
+  .footer-container iframe {
     width: 350px;
     height: 400px;
   }
+
   .footer-links,
   .footer-contact {
     width: 100%;

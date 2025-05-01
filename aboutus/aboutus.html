@@ -73,6 +73,50 @@
         </div>
     </section>
 
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Schedule a Call Form -->
+            <div class="form schedule-call-form">
+                <h3>Schedule a Call</h3>
+                <form>
+                    <label for="call-name">Name</label>
+                    <input type="text" id="call-name" required>
+
+                    <label for="call-phone">Phone Number</label>
+                    <input type="tel" id="call-phone" required>
+
+                    <label for="call-date">Preferred Date</label>
+                    <input type="date" id="call-date" required>
+
+                    <button type="submit" class="btn primary">Schedule</button>
+                </form>
+            </div>
+
+            <!-- Get a Free Quote Form -->
+            <div class="form quote-form" style="display: none;">
+                <h3>Get My Free Quote</h3>
+                <form>
+                    <label for="quote-name">Name</label>
+                    <input type="text" id="quote-name" required>
+
+                    <label for="quote-email">Email</label>
+                    <input type="email" id="quote-email" required>
+
+                    <label for="quote-details">Project Details</label>
+                    <textarea id="quote-details" required></textarea>
+
+                    <button type="submit" class="btn primary">Get Quote</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
     <!--  -->
     <section class="digital-first-containerr">
         <h2>About Us</h2>

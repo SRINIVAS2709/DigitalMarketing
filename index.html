@@ -82,6 +82,48 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Schedule a Call Form -->
+            <div class="form schedule-call-form">
+                <h3>Schedule a Call</h3>
+                <form id="scheduleForm">
+                    <label for="call-name">Name</label>
+                    <input type="text" id="call-name" required>
+
+                    <label for="call-phone">Phone Number</label>
+                    <input type="tel" id="call-phone" required>
+
+                    <label for="call-date">Preferred Date</label>
+                    <input type="date" id="call-date" required>
+
+                    <button type="submit" class="btn primary">Schedule</button>
+                </form>
+            </div>
+
+            <!-- Get a Free Quote Form -->
+            <div class="form quote-form" style="display: none;">
+                <h3>Get My Free Quote</h3>
+                <form id="quoteForm">
+                    <label for="quote-name">Name</label>
+                    <input type="text" id="quote-name" required>
+
+                    <label for="quote-email">Email</label>
+                    <input type="email" id="quote-email" required>
+
+                    <label for="quote-details">Project Details</label>
+                    <textarea id="quote-details" required></textarea>
+
+                    <button type="submit" class="btn primary">Get Quote</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Stats Section -->
     <section class="stats">
         <div class="stat-box">
@@ -433,11 +475,94 @@
 
 
     <script>
+        // 1. Toggle mobile menu
         function toggleMenu() {
             const menu = document.querySelector('.navbar .menu');
             menu.classList.toggle('active');
         }
+
+        // 2. Modal & Form logic
+        const modal = document.getElementById('modal');
+        const scheduleFormWrapper = document.querySelector('.schedule-call-form');
+        const quoteFormWrapper = document.querySelector('.quote-form');
+        const scheduleForm = scheduleFormWrapper.querySelector('form');
+        const quoteForm = quoteFormWrapper.querySelector('form');
+        const openButtons = document.querySelectorAll('.hero-buttons .btn');
+        const closeBtn = document.querySelector('.modal .close');
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyvPaa-YtqN_XpD9lWR2jtHBud7YiWU-e2HwEn-m0TKTtmPD58EUdeUfo3QLLoBczTC/exec';
+
+        // 3. Open modal and show correct form
+        openButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const isSchedule = button.textContent.includes('Schedule');
+                scheduleFormWrapper.style.display = isSchedule ? 'block' : 'none';
+                quoteFormWrapper.style.display = isSchedule ? 'none' : 'block';
+                modal.style.display = 'flex';
+            });
+        });
+
+        // 4. Close modal
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // 5. Handle Schedule form submit
+        scheduleForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const data = {
+                type: 'Schedule a Call',
+                name: document.getElementById('call-name').value,
+                phone: document.getElementById('call-phone').value,
+                date: document.getElementById('call-date').value,
+            };
+
+            sendToSheet(data);
+            scheduleForm.reset();
+        });
+
+        // 6. Handle Quote form submit
+        quoteForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const data = {
+                type: 'Free Quote',
+                name: document.getElementById('quote-name').value,
+                email: document.getElementById('quote-email').value,
+                message: document.getElementById('quote-details').value,
+            };
+
+            sendToSheet(data);
+            quoteForm.reset();
+        });
+
+        // 7. Send data to Google Sheets
+        function sendToSheet(formData) {
+            fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(response => {
+                    alert('Submitted successfully!');
+                    modal.style.display = 'none';
+                })
+                .catch(error => {
+                    alert('Error occurred: ' + error.message);
+                });
+        }
     </script>
+
 
 </body>
 
