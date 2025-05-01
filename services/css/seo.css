@@ -45,7 +45,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 40px;
   position: fixed;
-  top: 40px; 
+  top: 40px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -105,7 +105,7 @@ body {
   color: #00ff66;
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
 
@@ -190,25 +190,26 @@ body {
   .navbar {
     padding: 10px 20px;
     margin: 0;
-    top: 60px; 
-   }
- 
-   .navbar .logo{
-     width: 130px;
-     height: 100%;
-     display: flex;
-     align-items: end;
-   }
-   .navbar .logo img{
-     width: 100%;
-     height: 100%;
-   }
+    top: 60px;
+  }
+
+  .navbar .logo {
+    width: 130px;
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+
+  .navbar .logo img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* Hero Section */
 .hero {
   margin-top: 50px;
-  background: 
+  background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../../assets/images/SEOServiceBG.webp');
   background-size: cover;
@@ -219,7 +220,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white; /* makes text readable */
+  color: white;
+  /* makes text readable */
 }
 
 .hero-content {
@@ -306,6 +308,134 @@ body {
     margin: 10px 0;
     display: block;
     width: 100%;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  z-index: 1000;
+  /* Ensure modal is above other content */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 480px;
+  /* Max width of the modal */
+  position: relative;
+  animation: slideIn 0.5s ease-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for a modern look */
+  z-index: 1001;
+  /* Ensure modal content is above the modal background */
+}
+
+/* Close Button */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 1002;
+  /* Ensure close button is above the content */
+}
+
+.modal .close:hover {
+  color: #007BFF;
+}
+
+/* Form Styling */
+.form {
+  display: block;
+}
+
+.form label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007BFF;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  /* Slight scale on hover */
+}
+
+.form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -565,6 +695,7 @@ body {
   .service-box p {
     font-size: 13.5px;
   }
+
   .service-box {
     text-align: center;
   }
@@ -602,6 +733,7 @@ body {
   .service-box p {
     font-size: 13px;
   }
+
   .service-box {
     text-align: center;
   }
@@ -771,6 +903,7 @@ body {
 .fact-box:hover .diamond img {
   transform: rotate(0deg);
 }
+
 @media (max-width: 1024px) {
   .facts-section .section-title {
     font-size: 30px;
@@ -868,27 +1001,7 @@ body {
   border-radius: 2px;
 }
 
-.quote-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.quote-form input {
-  padding: 1rem;
-  font-size: 1rem;
-  width: 300px;
-  background: #f8f8f8;
-  border: none;
-  border-bottom: 2px solid #504f4f;
-  border-radius: 6px;
-  outline: none;
-}
-
-.quote-form button {
+.getfreequote-btn{
   padding: 1rem 2rem;
   font-size: 0.9rem;
   font-weight: bold;
@@ -900,7 +1013,7 @@ body {
   transition: 0.3s;
 }
 
-.quote-form button:hover {
+.getfreequote-btn:hover {
   opacity: 0.9;
 }
 
@@ -911,21 +1024,7 @@ body {
     /* Reduce font size for small screens */
   }
 
-  .quote-form {
-    flex-direction: column;
-    /* Stack the form elements vertically */
-    gap: 1.5rem;
-    /* Increased gap for better spacing */
-  }
-
-  .quote-form input {
-    width: 100%;
-    /* Make input fields take full width on small screens */
-    font-size: 1.1rem;
-    /* Increase font size slightly for easier reading */
-  }
-
-  .quote-form button {
+  .getfreequote-btn {
     width: 100%;
     /* Make button take full width */
     padding: 1rem;
@@ -940,13 +1039,7 @@ body {
     /* Further reduce font size on very small screens */
   }
 
-  .quote-form input {
-    padding: 0.8rem;
-    font-size: 1rem;
-    /* Adjust font size for very small screens */
-  }
-
-  .quote-form button {
+  .getfreequote-btn{
     padding: 0.8rem 1.5rem;
     /* Adjust button padding */
     font-size: 1rem;
@@ -1013,10 +1106,12 @@ body {
     margin-top: 10px;
     padding: 30px 10px;
   }
-  .footer-container iframe{
+
+  .footer-container iframe {
     width: 350px;
     height: 400px;
   }
+
   .footer-links,
   .footer-contact {
     width: 100%;

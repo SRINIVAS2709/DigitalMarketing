@@ -16,7 +16,7 @@
         <div class="container">
             <div class="left">
                 <i class="fas fa-envelope"></i> connect@growthlink.in
-                <i class="fas fa-phone-alt" style="margin-left: 20px;"></i> +91 8520830606
+                <i class="fa-solid fa-phone" style="margin-left: 20px;"></i> +91 8520830606
             </div>
             <div class="right">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -67,8 +67,8 @@
             <h2>Driving Business to the Next Level</h2>
             <p>Digital Marketing Agency that Fulfills All Your Marketing Needs</p>
             <div class="hero-buttons">
-                <a href="#" class="btn primary">Schedule a Call</a>
-                <a href="#" class="btn secondary">Get My Free Quote</a>
+                <a href="#" class="btn primary" onclick="openModal('schedule')">Schedule a Call</a>
+                <a href="#" class="btn secondary" onclick="openModal('quote')">Get My Free Quote</a>
             </div>
         </div>
     </section>
@@ -82,39 +82,36 @@
             <!-- Schedule a Call Form -->
             <div class="form schedule-call-form">
                 <h3>Schedule a Call</h3>
-                <form>
+                <form id="scheduleForm">
                     <label for="call-name">Name</label>
-                    <input type="text" id="call-name" required>
-
+                    <input type="text" id="call-name" required />
                     <label for="call-phone">Phone Number</label>
-                    <input type="tel" id="call-phone" required>
-
+                    <input type="tel" id="call-phone" required />
                     <label for="call-date">Preferred Date</label>
-                    <input type="date" id="call-date" required>
-
+                    <input type="date" id="call-date" required />
                     <button type="submit" class="btn primary">Schedule</button>
                 </form>
             </div>
 
+
             <!-- Get a Free Quote Form -->
             <div class="form quote-form" style="display: none;">
                 <h3>Get My Free Quote</h3>
-                <form>
+                <form id="quoteForm">
                     <label for="quote-name">Name</label>
-                    <input type="text" id="quote-name" required>
-
+                    <input type="text" id="quote-name" required />
                     <label for="quote-email">Email</label>
-                    <input type="email" id="quote-email" required>
-
-                    <label for="quote-details">Project Details</label>
-                    <textarea id="quote-details" required></textarea>
-
+                    <input type="email" id="quote-email" required />
+                    <label for="quote-phone">Phone Number</label>
+                    <input type="tel" id="quote-phone" required />
                     <button type="submit" class="btn primary">Get Quote</button>
                 </form>
             </div>
-
         </div>
     </div>
+
+
+
 
 
     <!--  -->
@@ -242,6 +239,7 @@
             }
         });
     </script>
+    <script src="../Form Submit/formsubmit.js"></script>
 </body>
 
 </html>
